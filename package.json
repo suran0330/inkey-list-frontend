@@ -18,7 +18,7 @@
     "@radix-ui/react-slot": "^1.2.3",
     "@radix-ui/react-tabs": "^1.1.12",
     "@sanity/client": "^6.0.0",
-    "@sanity/color-input": "^4.0.3",
+    "@sanity/color-input": "^2.1.0",
     "@sanity/image-url": "^1.0.0",
     "@sanity/vision": "^3.90.0",
     "@sanity/visual-editing": "^1.0.0",
