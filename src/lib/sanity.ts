@@ -1,19 +1,42 @@
 import { createClient } from '@sanity/client';
 import imageUrlBuilder from '@sanity/image-url';
+import { draftMode } from 'next/headers';
 
 // Sanity configuration with fallbacks
 const projectId = process.env.NEXT_PUBLIC_SANITY_PROJECT_ID || 'zqetc89y';
 const dataset = process.env.NEXT_PUBLIC_SANITY_DATASET || 'production';
+const apiVersion = '2024-01-01';
 
 // Check if Sanity is configured
 export const isSanityConfigured = !!(projectId && dataset);
 
+// Client for reading data (public)
 export const sanityClient = createClient({
   projectId: projectId,
   dataset: dataset,
-  apiVersion: '2024-01-01',
+  apiVersion: apiVersion,
   useCdn: true,
 });
+
+// Client for writing data and live preview (requires token)
+export const sanityClientWrite = createClient({
+  projectId: projectId,
+  dataset: dataset,
+  apiVersion: apiVersion,
+  useCdn: false,
+  token: process.env.SANITY_API_TOKEN,
+});
+
+// Helper to get the right client based on draft mode
+export function getClient(preview = false) {
+  if (typeof window === 'undefined') {
+    const isDraftMode = draftMode().isEnabled;
+    if (isDraftMode || preview) {
+      return sanityClientWrite;
+    }
+  }
+  return sanityClient;
+}
 
 const builder = imageUrlBuilder(sanityClient);
 export function urlFor(source: any) {
@@ -70,7 +93,8 @@ export async function getHomepageContent() {
       }
     }`;
 
-    return await sanityClient.fetch(query);
+    const client = getClient();
+    return await client.fetch(query);
   } catch (error) {
     console.error('Error fetching homepage content:', error);
     return {
@@ -102,7 +126,8 @@ export async function getActiveBanners(pageUrl = '/') {
       displaySettings
     }`;
 
-    const banners = await sanityClient.fetch(query);
+    const client = getClient();
+    const banners = await client.fetch(query);
 
     return banners.filter((banner: any) => {
       const { showOnPages } = banner.displaySettings;
