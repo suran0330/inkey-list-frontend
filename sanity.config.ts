@@ -1,79 +1,123 @@
 import {defineConfig} from 'sanity'
 import {deskTool} from 'sanity/desk'
 import {visionTool} from '@sanity/vision'
+import {defineField, defineType} from 'sanity'
 
-// Import i18n configuration
-import './src/i18n'
+// Simple, inline schema definitions to avoid import issues
+const productSchema = defineType({
+  name: 'product',
+  title: 'Products',
+  type: 'document',
+  fields: [
+    defineField({
+      name: 'name',
+      title: 'Product Name',
+      type: 'string',
+      validation: (Rule) => Rule.required()
+    }),
+    defineField({
+      name: 'slug',
+      title: 'URL Slug',
+      type: 'slug',
+      options: {
+        source: 'name',
+        maxLength: 96,
+      },
+      validation: (Rule) => Rule.required()
+    }),
+    defineField({
+      name: 'description',
+      title: 'Description',
+      type: 'text'
+    }),
+    defineField({
+      name: 'price',
+      title: 'Price',
+      type: 'number',
+      validation: (Rule) => Rule.required().min(0)
+    }),
+    defineField({
+      name: 'images',
+      title: 'Product Images',
+      type: 'array',
+      of: [{ type: 'image', options: { hotspot: true } }]
+    }),
+    defineField({
+      name: 'inStock',
+      title: 'In Stock',
+      type: 'boolean',
+      initialValue: true
+    })
+  ]
+})
 
-// Import schema types directly
-import homepage from './schemaTypes/homepage'
-import globalContent from './schemaTypes/globalContent'
-import page from './schemaTypes/page'
-import banner from './schemaTypes/banner'
-import blogPost from './schemaTypes/blogPost'
-import category from './schemaTypes/category'
-import product from './schemaTypes/product'
-import siteSettings from './schemaTypes/siteSettings'
+const categorySchema = defineType({
+  name: 'category',
+  title: 'Categories',
+  type: 'document',
+  fields: [
+    defineField({
+      name: 'name',
+      title: 'Category Name',
+      type: 'string',
+      validation: (Rule) => Rule.required()
+    }),
+    defineField({
+      name: 'slug',
+      title: 'URL Slug',
+      type: 'slug',
+      options: {
+        source: 'name',
+        maxLength: 96,
+      },
+      validation: (Rule) => Rule.required()
+    }),
+    defineField({
+      name: 'description',
+      title: 'Description',
+      type: 'text'
+    })
+  ]
+})
+
+const pageSchema = defineType({
+  name: 'page',
+  title: 'Pages',
+  type: 'document',
+  fields: [
+    defineField({
+      name: 'title',
+      title: 'Page Title',
+      type: 'string',
+      validation: (Rule) => Rule.required()
+    }),
+    defineField({
+      name: 'slug',
+      title: 'URL Slug',
+      type: 'slug',
+      options: {
+        source: 'title',
+        maxLength: 96,
+      },
+      validation: (Rule) => Rule.required()
+    }),
+    defineField({
+      name: 'content',
+      title: 'Content',
+      type: 'array',
+      of: [{type: 'block'}]
+    })
+  ]
+})
 
 export default defineConfig({
-  name: 'inkey-list-frontend',
+  name: 'inkey-list-studio',
   title: 'INKEY List Content Studio',
   projectId: '7i4b2ni6',
   dataset: 'production',
 
   plugins: [
-    deskTool({
-      structure: (S) =>
-        S.list()
-          .title('Content')
-          .items([
-            // Homepage
-            S.listItem()
-              .title('🏠 Homepage')
-              .child(
-                S.document()
-                  .schemaType('homepage')
-                  .documentId('homepage')
-              ),
-
-            // Site Settings
-            S.listItem()
-              .title('⚙️ Site Settings')
-              .child(
-                S.document()
-                  .schemaType('siteSettings')
-                  .documentId('site-settings')
-              ),
-
-            // Global Content
-            S.listItem()
-              .title('🌐 Global Content')
-              .child(
-                S.document()
-                  .schemaType('globalContent')
-                  .documentId('global-content')
-              ),
-
-            // Divider
-            S.divider(),
-
-            // Products
-            S.documentTypeListItem('product').title('🧴 Products'),
-
-            // Categories
-            S.documentTypeListItem('category').title('📂 Categories'),
-
-            // Pages
-            S.documentTypeListItem('page').title('📄 Pages'),
-
-            // Banners
-            S.documentTypeListItem('banner').title('📢 Banners'),
-
-            // Blog Posts
-            S.documentTypeListItem('blogPost').title('📝 Blog Posts'),
-          ])
-    }),
-
+    deskTool(),
     visionTool({
       defaultApiVersion: '2024-01-01',
     }),
@@ -81,19 +125,9 @@ export default defineConfig({
 
   schema: {
     types: [
-      // Core content management
-      homepage,
-      globalContent,
-      page,
-      banner,
-      siteSettings,
-
-      // E-commerce
-      product,
-      category,
-
-      // Blog content
-      blogPost,
+      productSchema,
+      categorySchema,
+      pageSchema
     ],
   },
 })
