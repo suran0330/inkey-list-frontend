@@ -1,0 +1,38 @@
+{
+  "name": "inkey-list-frontend",
+  "version": "1.0.0",
+  "description": "INKEY List Content Management Studio - Sanity Studio",
+  "main": "index.js",
+  "scripts": {
+    "start": "sanity start",
+    "build": "sanity build",
+    "deploy": "sanity deploy",
+    "dev": "sanity dev",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "sanity",
+    "cms",
+    "studio",
+    "inkey-list"
+  ],
+  "author": "INKEY List Team",
+  "license": "ISC",
+  "dependencies": {
+    "@sanity/client": "^7.4.0",
+    "@sanity/color-input": "^3.1.1",
+    "@sanity/ui": "^2.8.9",
+    "@sanity/vision": "^3.58.0",
+    "i18next": "^23.16.8",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "react-i18next": "^13.5.0",
+    "sanity": "^3.58.0",
+    "sanity-plugin-hotspot-array": "^1.0.1",
+    "styled-components": "^6.1.15"
+  },
+  "devDependencies": {
+    "@types/react": "^18.3.3",
+    "typescript": "^5.5.0"
+  }
+}

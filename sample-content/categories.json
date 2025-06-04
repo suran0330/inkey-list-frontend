@@ -1,0 +1,44 @@
+[
+  {
+    "name": "Serums",
+    "slug": {
+      "current": "serums"
+    },
+    "description": "Concentrated treatments targeting specific skin concerns. Our serums are formulated with clinically proven ingredients at effective concentrations to deliver visible results."
+  },
+  {
+    "name": "Cleansers",
+    "slug": {
+      "current": "cleansers"
+    },
+    "description": "Gentle yet effective cleansers that remove impurities without stripping the skin. Choose from oil cleansers, gel cleansers, and treatment cleansers for every skin type."
+  },
+  {
+    "name": "Eye Care",
+    "slug": {
+      "current": "eye-care"
+    },
+    "description": "Specialized treatments for the delicate eye area. Our eye care products address concerns like fine lines, dark circles, and puffiness with gentle yet effective formulations."
+  },
+  {
+    "name": "Moisturizers",
+    "slug": {
+      "current": "moisturizers"
+    },
+    "description": "Hydrating formulas that lock in moisture and strengthen the skin barrier. From lightweight gels to rich creams, find the perfect moisturizer for your skin type."
+  },
+  {
+    "name": "Treatments",
+    "slug": {
+      "current": "treatments"
+    },
+    "description": "Targeted treatments for specific skin concerns including acne, pigmentation, and signs of aging. Professional-grade ingredients for at-home use."
+  },
+  {
+    "name": "Sun Care",
+    "slug": {
+      "current": "sun-care"
+    },
+    "description": "Broad-spectrum protection against UV damage. Our sunscreens offer lightweight, non-greasy coverage that works under makeup and won't clog pores."
+  }
+]

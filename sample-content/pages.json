@@ -1,0 +1,186 @@
+[
+  {
+    "title": "About INKEY List",
+    "slug": {
+      "current": "about"
+    },
+    "content": [
+      {
+        "_type": "block",
+        "children": [
+          {
+            "_type": "span",
+            "text": "At The INKEY List, we believe that better knowledge powers better decisions. That's why we're committed to providing you with everything you need to understand your skin and make informed choices about the products you use."
+          }
+        ]
+      },
+      {
+        "_type": "block",
+        "children": [
+          {
+            "_type": "span",
+            "text": "Our Mission"
+          }
+        ],
+        "style": "h2"
+      },
+      {
+        "_type": "block",
+        "children": [
+          {
+            "_type": "span",
+            "text": "We're here to arm you with the knowledge you need to make the best decisions for your skin. From ingredient education to routine guidance, we want to help you understand what works and why."
+          }
+        ]
+      },
+      {
+        "_type": "block",
+        "children": [
+          {
+            "_type": "span",
+            "text": "Our Products"
+          }
+        ],
+        "style": "h2"
+      },
+      {
+        "_type": "block",
+        "children": [
+          {
+            "_type": "span",
+            "text": "Every product in our range is formulated with clinically proven ingredients at effective concentrations. We focus on single ingredients and simple formulations so you know exactly what you're putting on your skin."
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "title": "How to Build a Skincare Routine",
+    "slug": {
+      "current": "skincare-routine-guide"
+    },
+    "content": [
+      {
+        "_type": "block",
+        "children": [
+          {
+            "_type": "span",
+            "text": "Building an effective skincare routine doesn't have to be complicated. Follow our simple guide to create a routine that works for your skin type and concerns."
+          }
+        ]
+      },
+      {
+        "_type": "block",
+        "children": [
+          {
+            "_type": "span",
+            "text": "Morning Routine"
+          }
+        ],
+        "style": "h2"
+      },
+      {
+        "_type": "block",
+        "children": [
+          {
+            "_type": "span",
+            "text": "1. Cleanser - Start with a gentle cleanser to remove overnight buildup\n2. Treatment Serum - Apply any active ingredients like Vitamin C\n3. Moisturizer - Hydrate and protect your skin barrier\n4. SPF - Always finish with broad-spectrum sun protection"
+          }
+        ]
+      },
+      {
+        "_type": "block",
+        "children": [
+          {
+            "_type": "span",
+            "text": "Evening Routine"
+          }
+        ],
+        "style": "h2"
+      },
+      {
+        "_type": "block",
+        "children": [
+          {
+            "_type": "span",
+            "text": "1. Double Cleanse - Remove makeup and sunscreen thoroughly\n2. Treatment Serum - Apply retinol or other evening actives\n3. Moisturizer - Use a richer formula to repair overnight\n4. Eye Cream - Target specific eye area concerns"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "title": "Ingredient Glossary",
+    "slug": {
+      "current": "ingredients"
+    },
+    "content": [
+      {
+        "_type": "block",
+        "children": [
+          {
+            "_type": "span",
+            "text": "Understanding skincare ingredients can feel overwhelming. Here's your guide to the key ingredients in our products and what they do for your skin."
+          }
+        ]
+      },
+      {
+        "_type": "block",
+        "children": [
+          {
+            "_type": "span",
+            "text": "Hyaluronic Acid"
+          }
+        ],
+        "style": "h2"
+      },
+      {
+        "_type": "block",
+        "children": [
+          {
+            "_type": "span",
+            "text": "A powerful humectant that can hold up to 1000 times its weight in water. Provides instant and long-lasting hydration for all skin types."
+          }
+        ]
+      },
+      {
+        "_type": "block",
+        "children": [
+          {
+            "_type": "span",
+            "text": "Niacinamide"
+          }
+        ],
+        "style": "h2"
+      },
+      {
+        "_type": "block",
+        "children": [
+          {
+            "_type": "span",
+            "text": "Also known as Vitamin B3, this ingredient helps control oil production, minimize pores, and even skin tone. Suitable for all skin types including sensitive skin."
+          }
+        ]
+      },
+      {
+        "_type": "block",
+        "children": [
+          {
+            "_type": "span",
+            "text": "Retinol"
+          }
+        ],
+        "style": "h2"
+      },
+      {
+        "_type": "block",
+        "children": [
+          {
+            "_type": "span",
+            "text": "A form of Vitamin A that helps accelerate cell turnover, reduce fine lines, and improve skin texture. Start slowly and always use SPF during the day."
+          }
+        ]
+      }
+    ]
+  }
+]

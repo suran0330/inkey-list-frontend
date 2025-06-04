@@ -1,0 +1,116 @@
+[
+  {
+    "name": "Hyaluronic Acid Serum",
+    "slug": {
+      "current": "hyaluronic-acid-serum"
+    },
+    "description": "A lightweight serum that provides instant and lasting hydration. Hyaluronic acid holds up to 1000 times its weight in water, making it ideal for plumping and smoothing the skin. Suitable for all skin types and perfect for layering under moisturizer.",
+    "price": 7.99,
+    "inStock": true,
+    "category": "serums",
+    "skinConcerns": ["Hydration", "Fine Lines", "Dryness"],
+    "ingredients": ["Hyaluronic Acid", "Water", "Pentylene Glycol"],
+    "howToUse": "Apply 2-3 drops to clean skin morning and evening. Follow with moisturizer. Can be used under makeup.",
+    "keyBenefits": [
+      "Provides instant hydration",
+      "Plumps fine lines",
+      "Suitable for all skin types",
+      "Lightweight, non-greasy formula"
+    ]
+  },
+  {
+    "name": "Niacinamide",
+    "slug": {
+      "current": "niacinamide"
+    },
+    "description": "A 10% niacinamide serum that helps control excess oil production and reduce the appearance of enlarged pores. This powerful ingredient also helps to even skin tone and improve overall skin texture.",
+    "price": 5.99,
+    "inStock": true,
+    "category": "serums",
+    "skinConcerns": ["Oil Control", "Large Pores", "Uneven Texture"],
+    "ingredients": ["Niacinamide 10%", "Water", "Pentylene Glycol", "Zinc PCA"],
+    "howToUse": "Apply 2-3 drops to clean skin morning and evening. Start with once daily if new to niacinamide.",
+    "keyBenefits": [
+      "Controls excess oil",
+      "Minimizes pore appearance",
+      "Evens skin tone",
+      "Improves skin texture"
+    ]
+  },
+  {
+    "name": "Retinol Eye Cream",
+    "slug": {
+      "current": "retinol-eye-cream"
+    },
+    "description": "A gentle retinol formula specifically designed for the delicate eye area. Helps to reduce the appearance of fine lines and improve skin texture while being gentle enough for nightly use.",
+    "price": 9.99,
+    "inStock": true,
+    "category": "eye-care",
+    "skinConcerns": ["Fine Lines", "Dark Circles", "Eye Area Aging"],
+    "ingredients": ["Retinol", "Squalane", "Ceramides", "Peptides"],
+    "howToUse": "Apply a small amount around the eye area before bed. Start 2-3 times per week and build up tolerance.",
+    "keyBenefits": [
+      "Reduces fine lines",
+      "Gentle for eye area",
+      "Improves skin texture",
+      "Contains nourishing ceramides"
+    ]
+  },
+  {
+    "name": "Vitamin C Serum",
+    "slug": {
+      "current": "vitamin-c-serum"
+    },
+    "description": "A potent vitamin C serum with 30% L-Ascorbic Acid that brightens skin and helps reduce dark spots. Enhanced with vitamin E for antioxidant protection and improved stability.",
+    "price": 9.99,
+    "inStock": false,
+    "category": "serums",
+    "skinConcerns": ["Dark Spots", "Dullness", "Uneven Skin Tone"],
+    "ingredients": ["L-Ascorbic Acid 30%", "Vitamin E", "Water", "Propylene Glycol"],
+    "howToUse": "Apply 2-3 drops to clean skin in the morning. Always follow with SPF. Start with every other day.",
+    "keyBenefits": [
+      "Brightens complexion",
+      "Reduces dark spots",
+      "Antioxidant protection",
+      "Improves skin radiance"
+    ]
+  },
+  {
+    "name": "Caffeine Eye Serum",
+    "slug": {
+      "current": "caffeine-eye-serum"
+    },
+    "description": "An energizing eye serum with 5% caffeine solution that helps reduce puffiness and the appearance of dark circles. The lightweight formula absorbs quickly for instant refreshment.",
+    "price": 6.99,
+    "inStock": true,
+    "category": "eye-care",
+    "skinConcerns": ["Puffiness", "Dark Circles", "Tired Eyes"],
+    "ingredients": ["Caffeine 5%", "Epigallocatechin Gallatyl Glucoside", "Water"],
+    "howToUse": "Apply 1-2 drops around the eye area morning and evening. Gently pat in with ring finger.",
+    "keyBenefits": [
+      "Reduces puffiness",
+      "Minimizes dark circles",
+      "Energizes tired eyes",
+      "Lightweight formula"
+    ]
+  },
+  {
+    "name": "Salicylic Acid Cleanser",
+    "slug": {
+      "current": "salicylic-acid-cleanser"
+    },
+    "description": "A gentle daily cleanser with 2% salicylic acid that helps unclog pores and remove dead skin cells. Perfect for oily and blemish-prone skin without over-drying.",
+    "price": 8.99,
+    "inStock": true,
+    "category": "cleansers",
+    "skinConcerns": ["Acne", "Blackheads", "Clogged Pores"],
+    "ingredients": ["Salicylic Acid 2%", "Cocamidopropyl Betaine", "Water"],
+    "howToUse": "Use morning and evening. Apply to damp skin, massage gently, and rinse thoroughly with water.",
+    "keyBenefits": [
+      "Unclogs pores",
+      "Removes dead skin cells",
+      "Gentle on skin",
+      "Suitable for daily use"
+    ]
+  }
+]
