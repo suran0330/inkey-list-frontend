@@ -1,0 +1,16 @@
+{
+  "name": "INKEY List Content Studio",
+  "short_name": "INKEY Studio",
+  "description": "Content management studio for INKEY List skincare products",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#000000",
+  "icons": [
+    {
+      "src": "/favicon.ico",
+      "sizes": "32x32",
+      "type": "image/x-icon"
+    }
+  ]
+}

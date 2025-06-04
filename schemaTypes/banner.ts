@@ -11,7 +11,7 @@ export default defineType({
       title: 'Banner Title (Internal)',
       type: 'string',
       description: 'Internal title for organization - not shown to users',
-      validation: Rule => Rule.required()
+      validation: (Rule) => Rule.required()
     }),
     defineField({
       name: 'bannerType',
@@ -27,7 +27,7 @@ export default defineType({
           {title: 'Popup Modal', value: 'popup'}
         ]
       },
-      validation: Rule => Rule.required()
+      validation: (Rule) => Rule.required()
     }),
 
     // Display Settings
@@ -48,7 +48,7 @@ export default defineType({
           title: 'Priority',
           type: 'number',
           description: 'Higher numbers show first (1-100)',
-          validation: Rule => Rule.min(1).max(100),
+          validation: (Rule) => Rule.min(1).max(100),
           initialValue: 50
         },
         {
@@ -230,7 +230,7 @@ export default defineType({
               name: 'opacity',
               title: 'Overlay Opacity',
               type: 'number',
-              validation: Rule => Rule.min(0).max(1),
+              validation: (Rule) => Rule.min(0).max(1),
               initialValue: 0.5
             }
           ]

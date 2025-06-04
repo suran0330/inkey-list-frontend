@@ -1,5 +1,3 @@
-// Instructions: Create product schema for product management
-
 import {defineField, defineType} from 'sanity'
 
 export default defineType({
@@ -12,7 +10,7 @@ export default defineType({
       name: 'name',
       title: 'Product Name',
       type: 'string',
-      validation: Rule => Rule.required()
+      validation: (Rule) => Rule.required()
     }),
     defineField({
       name: 'slug',
@@ -22,7 +20,7 @@ export default defineType({
         source: 'name',
         maxLength: 96,
       },
-      validation: Rule => Rule.required()
+      validation: (Rule) => Rule.required()
     }),
     defineField({
       name: 'shortDescription',
@@ -40,12 +38,13 @@ export default defineType({
       name: 'price',
       title: 'Price',
       type: 'number',
-      validation: Rule => Rule.required().min(0)
+      validation: (Rule) => Rule.required().min(0)
     }),
     defineField({
       name: 'compareAtPrice',
       title: 'Compare at Price',
-      type: 'number'
+      type: 'number',
+      validation: (Rule) => Rule.min(0)
     }),
     defineField({
       name: 'images',
@@ -91,7 +90,8 @@ export default defineType({
     defineField({
       name: 'featured',
       title: 'Featured Product',
-      type: 'boolean'
+      type: 'boolean',
+      initialValue: false
     }),
     defineField({
       name: 'inStock',

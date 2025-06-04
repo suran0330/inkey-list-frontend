@@ -10,7 +10,7 @@ export default defineType({
       name: 'name',
       title: 'Category Name',
       type: 'string',
-      validation: Rule => Rule.required()
+      validation: (Rule) => Rule.required()
     }),
     defineField({
       name: 'slug',
@@ -19,7 +19,8 @@ export default defineType({
       options: {
         source: 'name',
         maxLength: 96,
-      }
+      },
+      validation: (Rule) => Rule.required()
     }),
     defineField({
       name: 'description',
@@ -35,5 +36,12 @@ export default defineType({
         hotspot: true,
       }
     })
-  ]
+  ],
+  preview: {
+    select: {
+      title: 'name',
+      subtitle: 'description',
+      media: 'image'
+    }
+  }
 })

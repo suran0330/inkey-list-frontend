@@ -10,7 +10,7 @@ export default defineType({
       name: 'title',
       title: 'Page Title (SEO)',
       type: 'string',
-      validation: Rule => Rule.required(),
+      validation: (Rule) => Rule.required(),
       initialValue: 'INKEY List - Science-Backed Skincare'
     }),
     defineField({
@@ -18,7 +18,7 @@ export default defineType({
       title: 'Meta Description',
       type: 'text',
       rows: 2,
-      validation: Rule => Rule.max(160),
+      validation: (Rule) => Rule.max(160),
       description: 'Brief description for search engines (max 160 characters)'
     }),
 
@@ -92,7 +92,7 @@ export default defineType({
               name: 'opacity',
               title: 'Overlay Opacity',
               type: 'number',
-              validation: Rule => Rule.min(0).max(1),
+              validation: (Rule) => Rule.min(0).max(1),
               initialValue: 0.3
             },
             {
@@ -106,7 +106,7 @@ export default defineType({
       ]
     }),
 
-    // Featured Products Section (references your admin products by ID/handle)
+    // Featured Products Section
     defineField({
       name: 'featuredProductsSection',
       title: 'Featured Products Section',
@@ -135,8 +135,8 @@ export default defineType({
           title: 'Featured Product IDs',
           type: 'array',
           of: [{type: 'string'}],
-          description: 'Enter product IDs from your admin system (e.g., "prod_123", "prod_456")',
-          validation: Rule => Rule.max(6)
+          description: 'Enter product IDs from your admin system',
+          validation: (Rule) => Rule.max(6)
         }),
         defineField({
           name: 'layout',
@@ -160,7 +160,7 @@ export default defineType({
       ]
     }),
 
-    // Content Sections (flexible content blocks)
+    // Content Sections
     defineField({
       name: 'contentSections',
       title: 'Content Sections',
@@ -278,7 +278,7 @@ export default defineType({
                   name: 'opacity',
                   title: 'Overlay Opacity',
                   type: 'number',
-                  validation: Rule => Rule.min(0).max(1),
+                  validation: (Rule) => Rule.min(0).max(1),
                   initialValue: 0.5
                 }
               ]
@@ -352,7 +352,7 @@ export default defineType({
           }
         },
 
-        // Product Category Section (references your admin categories)
+        // Product Category Section
         {
           type: 'object',
           name: 'productCategorySection',
@@ -373,13 +373,13 @@ export default defineType({
               name: 'categoryId',
               title: 'Category ID',
               type: 'string',
-              description: 'Enter the category ID from your admin system (e.g., "cat_serums")'
+              description: 'Enter the category ID from your admin system'
             },
             {
               name: 'productsToShow',
               title: 'Number of Products to Show',
               type: 'number',
-              validation: Rule => Rule.min(1).max(12),
+              validation: (Rule) => Rule.min(1).max(12),
               initialValue: 4
             },
             {
