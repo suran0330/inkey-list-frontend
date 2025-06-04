@@ -1,0 +1,12 @@
+export { functionEnvAddCore } from './env/add.js';
+export type { FunctionEnvAddOptions as EnvAddOptions } from './env/add.js';
+export { functionEnvListCore } from './env/list.js';
+export type { FunctionEnvListOptions as EnvListOptions } from './env/list.js';
+export { functionEnvRemoveCore } from './env/remove.js';
+export type { FunctionEnvRemoveOptions as EnvRemoveOptions } from './env/remove.js';
+export { functionLogsCore } from './logs.js';
+export type { FunctionLogsOptions } from './logs.js';
+export { functionTestCore } from './test.js';
+export type { FunctionTestOptions } from './test.js';
+export { functionDevCore } from './dev.js';
+export type { FunctionDevOptions } from './dev.js';

@@ -1,0 +1,9 @@
+import { Command } from '@oclif/core';
+export default class DevCommand extends Command {
+    static description: string;
+    static examples: string[];
+    static flags: {
+        port: import("@oclif/core/interfaces").OptionFlag<number | undefined, import("@oclif/core/interfaces").CustomOptions>;
+    };
+    run(): Promise<void>;
+}
