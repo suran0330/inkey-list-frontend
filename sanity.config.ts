@@ -1,7 +1,19 @@
 import {defineConfig} from 'sanity'
 import {deskTool} from 'sanity/desk'
 import {visionTool} from '@sanity/vision'
-import {schema} from './schemaTypes'
+
+// Import i18n configuration
+import './src/i18n'
+
+// Import schema types directly
+import homepage from './schemaTypes/homepage'
+import globalContent from './schemaTypes/globalContent'
+import page from './schemaTypes/page'
+import banner from './schemaTypes/banner'
+import blogPost from './schemaTypes/blogPost'
+import category from './schemaTypes/category'
+import product from './schemaTypes/product'
+import siteSettings from './schemaTypes/siteSettings'
 
 export default defineConfig({
   name: 'inkey-list-frontend',
@@ -68,6 +80,20 @@ export default defineConfig({
   ],
 
   schema: {
-    types: schema,
+    types: [
+      // Core content management
+      homepage,
+      globalContent,
+      page,
+      banner,
+      siteSettings,
+
+      // E-commerce
+      product,
+      category,
+
+      // Blog content
+      blogPost,
+    ],
   },
 })
