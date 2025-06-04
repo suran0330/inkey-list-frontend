@@ -319,7 +319,7 @@ export default defineType({
           title: 'Default Meta Description',
           type: 'text',
           rows: 2,
-          validation: Rule => Rule.max(160)
+          validation: (Rule) => Rule.max(160)
         },
         {
           name: 'defaultShareImage',

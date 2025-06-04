@@ -10,7 +10,7 @@ export default defineType({
       name: 'title',
       title: 'Page Title',
       type: 'string',
-      validation: Rule => Rule.required()
+      validation: (Rule) => Rule.required()
     }),
     defineField({
       name: 'slug',
@@ -20,7 +20,7 @@ export default defineType({
         source: 'title',
         maxLength: 96,
       },
-      validation: Rule => Rule.required()
+      validation: (Rule) => Rule.required()
     }),
     defineField({
       name: 'pageType',
@@ -425,14 +425,14 @@ export default defineType({
           title: 'Meta Title',
           type: 'string',
           description: 'If left empty, page title will be used',
-          validation: Rule => Rule.max(60)
+          validation: (Rule) => Rule.max(60)
         },
         {
           name: 'metaDescription',
           title: 'Meta Description',
           type: 'text',
           rows: 2,
-          validation: Rule => Rule.max(160)
+          validation: (Rule) => Rule.max(160)
         },
         {
           name: 'keywords',
